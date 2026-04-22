@@ -1,0 +1,169 @@
+/* Kawaii Pink Mode - Soft pastel pink aesthetic
+   Rounds everything, pinks everything, makes Obsidian feel like a
+   cozy notebook. Works with any base theme. */
+
+/* ── Core variable overrides (fixes black text/bg inheritance) ── */
+.theme-light, .theme-dark {
+  --kawaii-pink:              #f9a8d4;
+  --kawaii-pink-soft:         #fce7f3;
+  --kawaii-pink-deep:         #ec4899;
+  --kawaii-lavender:          #e9d5ff;
+  --kawaii-mint:              #bbf7d0;
+  --kawaii-peach:             #fed7aa;
+  --kawaii-radius:            16px;
+
+  --background-primary:       #fff5fb;
+  --background-primary-alt:   #fdf2f8;
+  --background-secondary:     #fdf2f8;
+  --background-secondary-alt: #fce7f3;
+  --background-modifier-hover: rgba(249, 168, 212, 0.15);
+  --background-modifier-active-hover: rgba(249, 168, 212, 0.25);
+  --background-modifier-border: rgba(236, 72, 153, 0.2);
+
+  --text-normal:              #5a2d5e;
+  --text-muted:               #a87ab0;
+  --text-faint:               #c4a0c8;
+  --text-on-accent:           #fff;
+  --text-accent:              #ec4899;
+  --text-accent-hover:        #db2777;
+
+  --interactive-accent:       #ec4899;
+  --interactive-accent-hover: #db2777;
+  --interactive-accent-rgb:   236, 72, 153;
+  --interactive-normal:       #fce7f3;
+  --interactive-hover:        #fdf2f8;
+
+  --titlebar-background:      #fce7f3;
+  --titlebar-background-focused: #f9d3eb;
+  --tab-container-background: #fce7f3;
+  --tab-text-color:           #a87ab0;
+  --tab-text-color-active:    #ec4899;
+
+  --scrollbar-thumb-bg:       rgba(249, 168, 212, 0.5);
+}
+
+/* ── Headings ── */
+.cm-header-1, .markdown-rendered h1 { color: var(--kawaii-pink-deep); font-size: 2em; }
+.cm-header-2, .markdown-rendered h2 { color: #c026d3; }
+.cm-header-3, .markdown-rendered h3 { color: #9333ea; }
+.cm-header-4, .markdown-rendered h4,
+.cm-header-5, .markdown-rendered h5,
+.cm-header-6, .markdown-rendered h6 { color: #a855f7; }
+
+/* ── Links ── */
+.cm-url, .cm-link,
+.markdown-rendered a {
+  color: var(--kawaii-pink-deep) !important;
+  text-decoration: none;
+}
+.markdown-rendered a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── Sidebar file nav ── */
+.nav-folder-title:hover,
+.nav-file-title:hover {
+  background: var(--kawaii-pink-soft) !important;
+  border-radius: 8px;
+}
+.nav-file-title.is-active {
+  background: var(--kawaii-pink-soft) !important;
+  color: var(--kawaii-pink-deep) !important;
+  border-radius: 8px;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--kawaii-pink);
+  border-radius: 999px;
+}
+
+/* ── Checkboxes ── */
+input[type="checkbox"] { accent-color: var(--kawaii-pink-deep); }
+.task-list-item-checkbox {
+  border-color: var(--kawaii-pink) !important;
+  border-radius: 50% !important;
+}
+.task-list-item.is-checked .task-list-item-checkbox {
+  background: var(--kawaii-pink-deep) !important;
+  border-color: var(--kawaii-pink-deep) !important;
+}
+.task-list-item.is-checked {
+  color: #c084fc;
+  text-decoration: line-through;
+}
+
+/* ── Tags ── */
+.tag {
+  background: var(--kawaii-pink-soft) !important;
+  color: var(--kawaii-pink-deep) !important;
+  border-radius: 999px !important;
+  padding: 2px 10px !important;
+  font-size: 12px !important;
+}
+
+/* ── Callouts ── */
+.callout {
+  border-radius: var(--kawaii-radius) !important;
+  border: none !important;
+}
+.callout[data-callout="note"],
+.callout[data-callout="info"]    { background: rgba(249, 168, 212, 0.15) !important; }
+.callout[data-callout="tip"],
+.callout[data-callout="success"] { background: rgba(187, 247, 208, 0.2) !important; }
+.callout[data-callout="warning"] { background: rgba(254, 215, 170, 0.25) !important; }
+
+/* ── Code ── */
+.markdown-rendered code,
+.cm-inline-code {
+  background: var(--kawaii-lavender) !important;
+  color: #7e22ce !important;
+  border-radius: 6px !important;
+  padding: 1px 6px !important;
+}
+pre code {
+  background: #f5e6ff !important;
+  border-radius: var(--kawaii-radius) !important;
+}
+
+/* ── Blockquotes ── */
+.markdown-rendered blockquote {
+  border-left: 3px solid var(--kawaii-pink) !important;
+  background: var(--kawaii-pink-soft);
+  border-radius: 0 var(--kawaii-radius) var(--kawaii-radius) 0;
+  color: #7c3f80;
+}
+
+/* ── Bold & italic ── */
+.cm-strong, .markdown-rendered strong { color: var(--kawaii-pink-deep); }
+.cm-em, .markdown-rendered em { color: #a855f7; }
+
+/* ── Modal / settings ── */
+.modal-container .modal {
+  background: #fff5fb !important;
+  border-radius: var(--kawaii-radius) !important;
+}
+
+/* ── Cursor ── */
+.cm-cursor { border-left-color: var(--kawaii-pink-deep) !important; }
+
+/* ── Selection ── */
+.cm-selectionBackground,
+::selection { background: rgba(249, 168, 212, 0.35) !important; }
+
+/* ── Status bar ── */
+.status-bar {
+  background: #fce7f3 !important;
+  color: #c084fc !important;
+  font-size: 11px;
+}
+
+/* ── Search highlight ── */
+.search-result-file-matched-text,
+.cm-searchMatch {
+  background: rgba(236, 72, 153, 0.2) !important;
+  border-radius: 3px;
+}
