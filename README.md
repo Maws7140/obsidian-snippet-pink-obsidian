@@ -2,8 +2,9 @@
 
 Pink your notes
 
-https://i.ibb.co/MJkwr6F/d5ae3b18eaa7.png
-https://i.ibb.co/TDpJGFYv/a2633491872a.png
+![Screenshot](https://i.ibb.co/MJkwr6F/d5ae3b18eaa7.png)
+![Screenshot](https://i.ibb.co/TDpJGFYv/a2633491872a.png)
+
 
 ## Description
 
